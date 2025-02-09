@@ -1,13 +1,13 @@
 import * as THREE from "three";
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const scene = new THREE.Scene();
 
 const cylinderGeometry = new THREE.CylinderGeometry(7, 7, 10, 10, 10, true);
 const cylinderMaterial = new THREE.MeshBasicMaterial({
   color: "blue",
-  wireframe: true,
+  //   wireframe: true,
+  side: THREE.DoubleSide,
 });
 
 const cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
@@ -40,7 +40,6 @@ controls.autoRotateSpeed = 10;
 controls.dampingFactor = 0.05;
 controls.enableZoom = true;
 
-
 function animate() {
   requestAnimationFrame(animate);
 
@@ -48,8 +47,8 @@ function animate() {
 
   renderer.render(scene, camera);
 
-//   cylinder.rotation.x += 0.01;
-//   cylinder.rotation.y += 0.01;
+  //   cylinder.rotation.x += 0.01;
+  //   cylinder.rotation.y += 0.01;
 }
 
 animate();

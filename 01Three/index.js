@@ -3,7 +3,7 @@ const canvas = document.querySelector(".first");
 const scene = new THREE.Scene();
 
 const geometry = new THREE.BoxGeometry(2, 2, 2);
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 ,wireframe: true });
 
 const box = new THREE.Mesh(geometry, material);
 scene.add(box);

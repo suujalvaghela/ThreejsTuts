@@ -113,7 +113,7 @@ ambientFolder.add(ambientLight, 'intensity', 0, 2).name('Intensity');
 
 // Directional Light controls
 const directionalFolder = lightFolder.addFolder('Directional Light');
-directionalFolder.add(directionalLight, 'intensity', 0, 5).name('Intensity');
+// directionalFolder.add(directionalLight, 'intensity', 0, 5).name('Intensity');
 directionalFolder.add(directionalLight.position, 'x', -5, 5).name('Position X');
 directionalFolder.add(directionalLight.position, 'y', -5, 5).name('Position Y');
 directionalFolder.add(directionalLight.position, 'z', -5, 5).name('Position Z');
